@@ -28,11 +28,11 @@ st.write("Choose the suitable model from the left sidebar, upload the image then
 nav = st.sidebar.radio("Model selection",["Trained from scratch","Trained from Efficientnet"])
 
 if nav == "Trained from scratch":
-    model = load_model('model_0.948.h5')
+    model = load_model('models/model_0.948.h5')
     st.write("You choosed the 95% accuracy trained from scratch model")
 
 if nav == "Trained from Efficientnet":
-    model = load_model('model_0.988.h5')
+    model = load_model('models/model_0.988.h5')
     st.write("You choosed the 98% accuracy Efficientnet based model")
 
 uploaded_file = st.file_uploader("Upload an image")
