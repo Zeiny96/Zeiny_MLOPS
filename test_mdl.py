@@ -1,12 +1,13 @@
 import os
 import io
 from tensorflow.keras.models import load_model
-import cv2
+from PIL import Image,ImageOps
 import numpy as np
 
 def load_image(img):
-    img = cv2.imread(img,0)
-    resized_img = cv2.resize(img,(256,256))
+    img = Image.open(img)
+    resized_img = img.resize((256,256),resample=Image.BILINEAR)
+    grayscale_resize_img = ImageOps.grayscale(resized_img)
     return resized_img
 
 def predict(model,img):
