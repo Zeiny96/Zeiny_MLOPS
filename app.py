@@ -29,8 +29,8 @@ def index():
 def git_update():
     repo = git.Repo('./Zeiny_MLOPS')
     origin = repo.remotes.origin
-    repo.create_head('main',
-                     origin.refs.main).set_tracking_branch(origin.refs.main.api).checkout()
+    repo.create_head('API',
+                     origin.refs.API).set_tracking_branch(origin.refs.API).checkout()
     origin.pull()
     return '', 200
 
