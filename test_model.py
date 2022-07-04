@@ -2,7 +2,7 @@ import os
 import io
 from PIL import Image,ImageOps
 from tensorflow.keras.models import load_model
-import opencv as cv2
+import cv2
 import numpy as np
 
 def load_image(img):
