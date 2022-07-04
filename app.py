@@ -25,14 +25,6 @@ app = flask.Flask(__name__)
 def index():
         return "Welcome To My Covid-19_detector API"
 
-@app.route('/git_update', methods=['POST'])
-def git_update():
-    repo = git.Repo('./Zeiny_MLOPS')
-    origin = repo.remotes.origin
-    repo.create_head('API',
-                     origin.refs.API).set_tracking_branch(origin.refs.API).checkout()
-    origin.pull()
-    return '', 200
 
 @app.route("/alive", methods=["GET"])
 def alive():
