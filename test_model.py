@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 import numpy as np
 import warnings
 
-warnings.filterwarnings('ignore', '.do not.', )
+warnings.filterwarnings('ignore')
 
 def load_image(img):
     img = Image.open(img)
