@@ -15,7 +15,7 @@ def predict(model,img):
     loaded_img = loaded_img.reshape(1,256,256,1)
     result = model.predict(loaded_img)[0][0]
     result = "NORMAL" if result >= 0.5 else "COVID19"
-    assert result
+    assert 0
 
 img = "COVID19.png"
 for accuracy in ['0.948','0.988']:
