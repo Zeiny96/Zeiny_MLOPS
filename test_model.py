@@ -1,3 +1,4 @@
+//eslint-disable jsx-a11y/alt-text
 import os
 import io
 from PIL import Image,ImageOps
