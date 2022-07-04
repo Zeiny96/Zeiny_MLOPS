@@ -36,7 +36,7 @@ def git_update():
 
 @app.route("/alive", methods=["GET"])
 def alive():
-    js={"message":"Server is alive!"}
+    js={"message":"Server is cute alive!"}
     return js
 
 
