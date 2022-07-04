@@ -23,7 +23,7 @@ def predict(model,img):
     return result
 
 st.title("Covid-19_detector")
-st.write("Choose the suitable model from the left sidebar, upload the image then click predict to get the result")
+st.write("choose the suitable model from the left sidebar, upload the image then click predict to get the result")
 nav = st.sidebar.radio("Model selection",["Trained from scratch","Trained from Efficientnet"])
 
 if nav == "Trained from scratch":
