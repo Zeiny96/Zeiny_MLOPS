@@ -1,5 +1,4 @@
 import os
-import io
 from tensorflow.keras.models import load_model
 from PIL import Image,ImageOps
 import numpy as np
