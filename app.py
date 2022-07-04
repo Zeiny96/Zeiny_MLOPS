@@ -5,6 +5,7 @@ from werkzeug.exceptions import HTTPException
 import os
 import magic
 import tensorflow as tf
+import git
 from tensorflow.keras.models import load_model
 from predict import predict
 
