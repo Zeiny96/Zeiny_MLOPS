@@ -3,7 +3,7 @@ from tensorflow.keras.models import load_model
 import numpy as np
 from PIL import Image,ImageOps
 
-def load_image():
+def load_image(img):
     img = Image.open(img)
     resized_img = img.resize((256,256),resample=Image.Resampling.BILINEAR)
     grayscale_resize_img = ImageOps.grayscale(resized_img)
