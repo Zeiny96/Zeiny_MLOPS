@@ -3,11 +3,12 @@ import os
 import io
 from PIL import Image,ImageOps
 from tensorflow.keras.models import load_model
+import opencv as cv2
 import numpy as np
 
 def load_image(img):
     img = Image.open(img)
-    resized_img = img.resize((256,256),resample=Image.BILINEAR)
+    resized_img = cv2.resize(img,(256,256))
     grayscale_resize_img = ImageOps.grayscale(resized_img)
 
     return grayscale_resize_img
