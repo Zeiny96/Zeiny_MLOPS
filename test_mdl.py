@@ -1,6 +1,6 @@
 import os
 import io
-#from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 from PIL import Image,ImageOps
 import numpy as np
 
@@ -8,7 +8,7 @@ def load_image(img):
     img = Image.open(img)
     resized_img = img.resize((256,256),resample=Image.Resampling.BILINEAR)
     grayscale_resize_img = ImageOps.grayscale(resized_img)
-    assert resized_img
+    return resized_img
 
 def predict(model,img):
     loaded_img = load_image(img)
@@ -20,6 +20,5 @@ def predict(model,img):
 
 img = "COVID19.png"
 for accuracy in ['0.948','0.988']:
-    #model = load_model(f'model_{accuracy}.h5')
-    #predict(model,img)
-    loaded_img = load_image(img)
+    model = load_model(f'model_{accuracy}.h5')
+    predict(model,img)
