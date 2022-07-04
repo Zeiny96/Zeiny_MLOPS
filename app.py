@@ -29,13 +29,13 @@ def git_update():
     repo = git.Repo('./orbe')
     origin = repo.remotes.origin
     repo.create_head('main',
-                     origin.refs.main).set_tracking_branch(origin.refs.main.API).checkout()
+                     origin.refs.main).set_tracking_branch(origin.refs.API).checkout()
     origin.pull()
     return '', 200
 
 @app.route("/alive", methods=["GET"])
 def alive():
-    js={"message":"Server is fking alive!"}
+    js={"message":"Server is fkin alive!"}
     return js
 
 
