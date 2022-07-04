@@ -1,7 +1,5 @@
 import os
 import io
-import tensorflow.python.util.deprecation as deprecation
-deprecation._PRINT_DEPRECATION_WARNINGS = False
 from tensorflow.keras.models import load_model
 from PIL import Image,ImageOps
 import numpy as np
