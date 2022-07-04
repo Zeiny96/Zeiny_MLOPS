@@ -22,7 +22,16 @@ app = flask.Flask(__name__)
 
 @app.route("/")
 def index():
-        return "Welcome To My Drinks API"
+        return "Welcome To My Covid-19_detector API"
+
+@app.route('/git_update', methods=['POST'])
+def git_update():
+    repo = git.Repo('./orbe')
+    origin = repo.remotes.origin
+    repo.create_head('main',
+                     origin.refs.main).set_tracking_branch(origin.refs.main.API).checkout()
+    origin.pull()
+    return '', 200
 
 @app.route("/alive", methods=["GET"])
 def alive():
