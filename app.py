@@ -5,7 +5,6 @@ import io
 from PIL import Image,ImageOps
 from tensorflow.keras.models import load_model
 import numpy as np
-import matplotlib.pyplot as plt
 
 def load_image(img):
     img = io.BytesIO(img)
