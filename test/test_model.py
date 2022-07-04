@@ -10,9 +10,7 @@ def test_load_image(img):
     return resized_img
 
 def test_predict(accuracy,img):
-    assert(load_model(f'../models/model_{accuracy}.h5'))
     model = load_model(f'../models/model_{accuracy}.h5')
-    assert(test_load_image(img))
     loaded_img = test_load_image(img)
     loaded_img = np.asarray(loaded_img)
     loaded_img = loaded_img.reshape(1,256,256,1)
