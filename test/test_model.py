@@ -13,7 +13,7 @@ def test_predict(model,img):
     loaded_img = load_image(img)
     loaded_img = np.asarray(loaded_img)
     loaded_img = loaded_img.reshape(1,256,256,1)
-    assert model.predict(loaded_img)[0][0]
+    return model.predict(loaded_img)[0][0]
     
 
 img = "COVID19.png"
