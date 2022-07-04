@@ -1,12 +1,12 @@
 import os
 import io
-from PIL import Image,ImageOps
+#from PIL import Image,ImageOps
 from tensorflow.keras.models import load_model
 import cv2
 import numpy as np
 
 def load_image(img):
-    img = Image.open(img)
+    img = cv2.imread(img)
     resized_img = cv2.resize(img,(256,256))
     grayscale_resize_img = ImageOps.grayscale(resized_img)
 
