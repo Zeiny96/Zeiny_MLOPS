@@ -9,7 +9,7 @@ import numpy as np
 def load_image(img):
     img = io.BytesIO(img)
     img = Image.open(img)
-    resized_img = img.resize((256,256),resample=Image.BILINEAR)
+    resized_img = img.resize((256,256),resample=Image.Resampling.BILINEAR)
     grayscale_resize_img = ImageOps.grayscale(resized_img)
 
     return grayscale_resize_img
