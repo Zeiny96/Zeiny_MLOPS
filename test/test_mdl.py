@@ -1,18 +1,15 @@
 import os
 from tensorflow.keras.models import load_model
 import numpy as np
-import pytest
 from PIL import Image,ImageOps
 
-@pytest.mark.filterwarnings("ignore:api v1")
-def load_image(img):
+def test_load_image(img):
     img = Image.open(img)
     resized_img = img.resize((256,256),resample=Image.Resampling.BILINEAR)
     grayscale_resize_img = ImageOps.grayscale(resized_img)
     return resized_img
 
-@pytest.mark.filterwarnings("ignore:api v1")
-def predict(model,img):
+def test_predict(model,img):
     loaded_img = load_image(img)
     loaded_img = np.asarray(loaded_img)
     loaded_img = loaded_img.reshape(1,256,256,1)
