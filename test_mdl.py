@@ -8,7 +8,7 @@ def load_image(img):
     img = Image.open(img)
     resized_img = img.resize((256,256),resample=Image.Resampling.BILINEAR)
     grayscale_resize_img = ImageOps.grayscale(resized_img)
-    return resized_img
+    assert resized_img
 
 def predict(model,img):
     loaded_img = load_image(img)
