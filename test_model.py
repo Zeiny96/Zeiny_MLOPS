@@ -6,11 +6,11 @@ import cv2
 import numpy as np
 
 def load_image(img):
-    img = cv2.imread(img)
+    img = cv2.imread(img,0)
     resized_img = cv2.resize(img,(256,256))
-    grayscale_resize_img = cv2.imdecode(resized_img, cv2.IMREAD_GRAYSCALE)  #ImageOps.grayscale(resized_img)
+    #grayscale_resize_img = cv2.imdecode(resized_img, cv2.IMREAD_GRAYSCALE)  #ImageOps.grayscale(resized_img)
 
-    return grayscale_resize_img
+    return resized_img
 
 def predict(model,img):
     loaded_img = load_image(img)
