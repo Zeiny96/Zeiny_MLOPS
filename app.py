@@ -1,7 +1,6 @@
 import streamlit as st
-import os
+import os, io
 import magic
-import io
 from PIL import Image,ImageOps
 from tensorflow.keras.models import load_model
 import numpy as np
