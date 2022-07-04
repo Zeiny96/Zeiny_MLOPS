@@ -5,6 +5,7 @@ gevent==21.12.0
 Werkzeug==2.1.2
 pillow==9.2.0
 pytest
-numpy
+pandas
+numpy==1.23.0
 python_magic==0.4.27
 tensorflow==2.9.1
