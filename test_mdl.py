@@ -1,6 +1,6 @@
 import os
 import io
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 from PIL import Image,ImageOps
 import numpy as np
 
@@ -20,5 +20,6 @@ def predict(model,img):
 
 img = "COVID19.png"
 for accuracy in ['0.948','0.988']:
-    model = load_model(f'model_{accuracy}.h5')
-    predict(model,img)
+    #model = load_model(f'model_{accuracy}.h5')
+    #predict(model,img)
+    loaded_img = load_image(img)
