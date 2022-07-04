@@ -1,7 +1,6 @@
 import os
 from tensorflow.keras.models import load_model
 from PIL import Image,ImageOps
-import numpy as np
 
 def load_image(img):
     img = Image.open(img)
