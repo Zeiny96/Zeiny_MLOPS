@@ -1,3 +1,4 @@
+streamlit==1.10.0
 flask==2.1.2
 requests==2.28.1
 gevent==21.12.0
