@@ -20,6 +20,10 @@ empty_json={"error":"Empty request","Description":"The received request had no f
 
 app = flask.Flask(__name__)
 
+@app.route("/")
+def index():
+        return "Welcome To My Drinks API"
+
 @app.route("/alive", methods=["GET"])
 def alive():
     js={"message":"Server is alive!"}
@@ -59,9 +63,9 @@ def handle_error(e):
         msg={"error":"Internal server error","Description":"An internal server error has occured"}
         return e.description,msg,500
 
-server = WSGIServer(('', 5000), app)
+#server = WSGIServer(('', 5000), app)
 print('Server initiated successfully')
-server.serve_forever()
+#server.serve_forever()
 
 
 
