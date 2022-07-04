@@ -1,6 +1,5 @@
 import os
 import io
-#from PIL import Image,ImageOps
 from tensorflow.keras.models import load_model
 import cv2
 import numpy as np
@@ -8,8 +7,6 @@ import numpy as np
 def load_image(img):
     img = cv2.imread(img,0)
     resized_img = cv2.resize(img,(256,256))
-    #grayscale_resize_img = cv2.imdecode(resized_img, cv2.IMREAD_GRAYSCALE)  #ImageOps.grayscale(resized_img)
-
     return resized_img
 
 def predict(model,img):
@@ -17,7 +14,6 @@ def predict(model,img):
     loaded_img = np.asarray(loaded_img)
     loaded_img = loaded_img.reshape(1,256,256,1)
     result = model.predict(loaded_img)[0][0]
-
     result = "NORMAL" if result >= 0.5 else "COVID19"
     assert result
 
