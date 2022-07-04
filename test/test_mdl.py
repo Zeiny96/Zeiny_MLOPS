@@ -10,7 +10,9 @@ def test_load_image(img):
     return resized_img
 
 def test_predict(model,img):
-    loaded_img = load_image(img)
+    assert(load_model(f'../models/model_{accuracy}.h5'))
+    model = load_model(f'../models/model_{accuracy}.h5')
+    loaded_img = test_load_image(img)
     loaded_img = np.asarray(loaded_img)
     loaded_img = loaded_img.reshape(1,256,256,1)
     assert model.predict(loaded_img)[0][0]
@@ -18,6 +20,4 @@ def test_predict(model,img):
 
 img = "COVID19.png"
 for accuracy in ['0.948','0.988']:
-    assert(load_model(f'../models/model_{accuracy}.h5'))
-    model = load_model(f'../models/model_{accuracy}.h5')
-    predict(model,img)
+    test_predict(accuracy,img)
