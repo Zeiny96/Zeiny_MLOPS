@@ -29,7 +29,7 @@ def git_update():
     repo = git.Repo('./Zeiny_MLOPS')
     origin = repo.remotes.origin
     repo.create_head('main',
-                     origin.refs.main).set_tracking_branch(origin.refs.API).checkout()
+                     origin.refs.main).set_tracking_branch(origin.refs.main.API).checkout()
     origin.pull()
     return '', 200
 
