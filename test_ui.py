@@ -18,12 +18,12 @@ def predict(model,img):
     result = model.predict(loaded_img)[0][0]
 
     result = "NORMAL" if result >= 0.5 else "COVID19"
-    return result
+    assert result
 
 img = "COVID19.png"
 for accuracy in ['0.948','0.988']:
     model = load_model('model_0.948.h5')
-    result = predict(model,img)
-    print(result)
+    predict(model,img)
+
 
 
