@@ -44,7 +44,7 @@ if uploaded_file is not None:
         if st.button("Predict"):
             state = predict(model,img)
             if state=='NORMAL':
-                st.write(f'**This x-rays belong to a normal person**')
+                st.title(f'**This x-rays belong to a normal person**')
             else:
                 st.title(f'**This x-rays belong to a covid-19 infected person**')
         if st.checkbox("Show image"):
