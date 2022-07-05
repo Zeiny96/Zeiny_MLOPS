@@ -59,3 +59,7 @@ print ('response from server:',res.json())
 ```
 {"error":"Method not allowed","Description":"A wrong method was used"}
 ```
+- In case of internal server errors, the api will response with an error code starting from 500, with the following message:
+```
+{"error":"Internal server error","Description":"An internal server error has occured"}
+```
