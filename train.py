@@ -4,6 +4,7 @@ from tensorflow import keras
 from tensorflow.keras import layers,models
 from tensorflow.keras.preprocessing import image_dataset_from_directory
 from tensorflow.keras.applications import EfficientNetB0
+import matplotlib.pyplot as plt
 
 class EarlyStopping(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
@@ -52,8 +53,24 @@ model.compile(loss='binary_crossentropy',
               metrics=['accuracy'])
 model.summary()
 
-model.fit(train_generator,validation_data=valid_generator,epochs=5,callbacks=[EarlyStopping_callback])
+history = model.fit(train_generator,validation_data=valid_generator,epochs=5,callbacks=[EarlyStopping_callback])
 
+# summarize history for accuracy
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'validation'], loc='upper left')
+plt.savefig('acc.png')
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'validation'], loc='upper left')
+plt.savefig('val.png')
 
 test_dir = "../DataSet/Data/test_png"
 evaluate_gen = image_dataset_from_directory(directory=test_dir,label_mode='binary',batch_size=32,color_mode='grayscale',image_size=input_shape)
