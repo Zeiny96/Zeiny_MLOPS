@@ -10,7 +10,22 @@
 ```
 curl -X 'GET' 'https://zeiny-mlops.herokuapp.com/alive'
 ```
+- To get the same response in python:
+```
+import requests
+res = requests.get('https://zeiny-mlops.herokuapp.com/alive')
+print ('response from server:',res.json())
+```
 - Or to send an image and get the result use:
 ```
 curl -X POST -F file=@"$file_path" https://zeiny-mlops.herokuapp.com/prediction
 ```
+- To get the same response in python:
+```
+dir ="image.png"
+image_file=open(dir,"rb")
+dicttosend={'file':image_file}
+res = requests.post('https://zeiny-mlops.herokuapp.com/prediction',files=dicttosend)
+print ('response from server:',res.json())
+```
+- In case of 
