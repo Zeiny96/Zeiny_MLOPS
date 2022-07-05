@@ -4,7 +4,7 @@
 ## Content
 - [Structure](#structure)
 - [Requests-Responses](#requests-responses)
-- [Error handling](#error handling)
+- [Error_handling](#error_handling)
 
 ## Structure
 - The main flask script is [app.py](app.py).
@@ -38,4 +38,4 @@ res = requests.post('https://zeiny-mlops.herokuapp.com/prediction',files=dicttos
 print ('response from server:',res.json())
 ```
 
-## Error handling
+## Error_handling
