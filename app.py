@@ -12,7 +12,7 @@ from predict import predict
 os.environ["CUDA_VISIBLE_DEVICES"]="-1"
 
 # Loading the model
-model = load_model('model.h5')
+model = load_model('models/model_small.h5')
 
 # Preparing error messages
 invalid_file={"error":"Invalid file ","Description":"The received file was either of an invalid extension, corrupted or empty"}
