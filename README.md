@@ -28,4 +28,3 @@ dicttosend={'file':image_file}
 res = requests.post('https://zeiny-mlops.herokuapp.com/prediction',files=dicttosend)
 print ('response from server:',res.json())
 ```
-- In case of 
