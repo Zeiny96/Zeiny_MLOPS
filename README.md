@@ -62,8 +62,9 @@ _________________________________________________________________
 - It got 98.8% accuracy on the test set
 
 ### [small model](models/model_small.h5):
-- Training/validation loss graph:
-![alt text](images/loss.png)
-- Training/validation accuracy graph:
+- **Training/validation loss graph**:                
+![alt text](images/loss.jpg)
+- **Training/validation accuracy graph**:                
 ![alt text](images/accuracy.png)
-- It got 94.8% accuracy on the test set, the [efficientnet based model](models/model_efficientnet.h5) got greater results but the [small model](models/model_small.h5) results also can be accepted due to its small number of parameters and faster performance
+- It got 94.8% accuracy on the test set
+- The [efficientnet based model](models/model_efficientnet.h5) got greater results but the [small model](models/model_small.h5) results can also be accepted due to its small number of parameters and faster performance.
