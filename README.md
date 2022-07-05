@@ -46,4 +46,7 @@ Trainable params: 164,097
 Non-trainable params: 4,049,571
 _________________________________________________________________
 ```
-- The difference in the number of parameters is huge so the performance of the small model is by far much faster
+- The difference in the number of parameters is huge so the performance of the small model is by far much faster.
+- The small model got 94.8% accuracy on the test set, while the efficientnet based model got 98.8%, the effecientnet based model get greater results but the small model results also can be accepted due to its small number of parameters
+- To train your model just run the [train.py](train.py) while passing to its generator the training directory and the test directory to report the models results on it, to choose the small model choose to train using the function `Model()`, while to train using the efficientnet based model choose `efficientnet()`.
+- To test the produced model on a single image use [test.py](test.py).
