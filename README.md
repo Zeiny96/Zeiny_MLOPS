@@ -39,3 +39,23 @@ print ('response from server:',res.json())
 ```
 
 ## Error_handling
+- In case of sending an invalid, empty or corrupted image, the api will response with code 400, with the following message:
+```
+{"error":"Invalid file ","Description":"The received file was either of an invalid extension, corrupted or empty"}
+```
+- In case of sending an empty json, the api will response with code 400, with the following message:
+```
+{"error":"Empty request","Description":"The received request had no file in it or wasn't in the required json form"}
+```
+- In case of client mistakes, the api will response with an error code of 400, with the following message:
+```
+{"error":"Bad Request Error","Description":"The process couldn't be proceeded due to a client error"}
+```
+- In case of trying to access a wrong endpoint , the api will response with an error code of 404, with the following message:
+```
+{"error":"Wrong endpoint","Description":"Tried to access an undefined endpoint, The only available endpoints are /alive /prediction"}
+```
+- In case of using a wrong method, the api will response with an error code of 405, with the following message:
+```
+{"error":"Method not allowed","Description":"A wrong method was used"}
+```
