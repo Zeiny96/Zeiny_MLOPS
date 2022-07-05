@@ -17,6 +17,6 @@ def test_predict():
     
 
 img = "COVID19.png"
-for accuracy in ['0.948','0.988']:
-    model = load_model(f'../models/model_{accuracy}.h5')
+for type in ['small','efficientnet']:
+    model = load_model(f'../models/model_{type}.h5')
     test_predict()
