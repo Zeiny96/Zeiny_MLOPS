@@ -17,5 +17,5 @@ def test_predict():
     
 
 img = "COVID19.png"
-model = load_model(f'../model.h5')
+model = load_model(f'../models/model_small.h5')
 test_predict()
