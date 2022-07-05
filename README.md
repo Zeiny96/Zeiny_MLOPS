@@ -53,7 +53,7 @@ print ('response from server:',res.json())
 ```
 - In case of trying to access a wrong endpoint , the api will response with an error code of 404, with the following message:
 ```
-{"error":"Wrong endpoint","Description":"Tried to access an undefined endpoint, The only available endpoints are /alive /prediction"}
+{"error":"Wrong endpoint","Description":"Tried to access an undefined endpoint, the only available endpoints are /alive /prediction"}
 ```
 - In case of using a wrong method, the api will response with an error code of 405, with the following message:
 ```
