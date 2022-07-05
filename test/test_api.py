@@ -1,11 +1,11 @@
 import requests
 
-test_alive():
+def test_alive():
   res_code = str(res).split('[')[1].split(']')[0]
   assert (res_code == '200')
   assert (res.json()['message']=='Server is alive!')
 
-test_response():
+def test_response():
   res_code = str(res).split('[')[1].split(']')[0]
   assert (res_code == '200')
 
