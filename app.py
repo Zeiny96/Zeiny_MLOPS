@@ -52,7 +52,7 @@ def handle_error(e):
     if isinstance(e,HTTPException):
         code = e.code
     if (code==404):
-        msg={"error":"Wrong endpoint","Description":"Tried to access an undefined endpoint, The only available endpoints are /alive /prediction"}
+        msg={"error":"Wrong endpoint","Description":"Tried to access an undefined endpoint, the only available endpoints are /alive /prediction"}
         return msg,code
     elif (code==405):
         msg={"error":"Method not allowed","Description":"A wrong method was used"}
