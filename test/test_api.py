@@ -10,6 +10,7 @@ def test_response():
   assert (res_code == '200')
 
 res = requests.get('https://zeiny-mlops.herokuapp.com/alive')
+print(res.json())
 test_alive()
 
 dir="COVID19.png"
