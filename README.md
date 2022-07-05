@@ -5,7 +5,7 @@
 - [Training](#training)
 - [Evaluation](#evaluation)
 
-# Training
+## Training
 - Where 2 models were trained a [small model](models/model_small.h5) trained from scratch with the following architecture:
 ```
 _________________________________________________________________
@@ -53,8 +53,17 @@ Non-trainable params: 4,049,571
 _________________________________________________________________
 ```
 - The difference in the number of parameters is huge so the performance of the [small model](models/model_small.h5) is by far much faster.
-
-# Evaluation
-- The [small model](models/model_small.h5) got 94.8% accuracy on the test set, while the [efficientnet based model](models/model_efficientnet.h5) got 98.8%, the [efficientnet based model](models/model_efficientnet.h5) get greater results but the [small model](models/model_small.h5) results also can be accepted due to its small number of parameters
 - To train your model just run the [train.py](train.py) while passing to its generator the training directory and the test directory to report the models results on it, to choose the [small model](models/model_small.h5) choose to train using the function `Model()`, while to train using the [efficientnet based model](models/model_efficientnet.h5) choose `efficientnet()`.
-- To test the produced model on a single image use [test.py](test.py).
+
+## Evaluation
+- To test any produced model on a single image use [test.py](test.py) while passing the desired `model.h5` file to it.
+### [Efficientnet based model](models/model_efficientnet.h5):
+- This model was trained only for 1 epoch so drawing a training/validation accuracy and loss graphs wasn't possible.
+- It got 98.8% accuracy on the test set
+
+### [small model](models/model_small.h5):
+- Training/validation loss graph:
+![alt text](images/loss.png)
+- Training/validation accuracy graph:
+![alt text](images/accuracy.png)
+- It got 94.8% accuracy on the test set, the [efficientnet based model](models/model_efficientnet.h5) got greater results but the [small model](models/model_small.h5) results also can be accepted due to its small number of parameters and faster performance
