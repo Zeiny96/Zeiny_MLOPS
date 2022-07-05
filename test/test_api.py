@@ -32,15 +32,7 @@ expected_code = '404'
 test_response()
 
 ## Wrong method
-### post instead of get
 res = requests.post('https://zeiny-mlops.herokuapp.com/alive')
-expected_code = '405'
-test_response()
-### get instead of post
-dir="COVID19.png"
-image_file=open(dir,"rb")
-dicttosend={'file':image_file}
-res = requests.get('https://zeiny-mlops.herokuapp.com/prediction', files=dicttosend)
 expected_code = '405'
 test_response()
 
