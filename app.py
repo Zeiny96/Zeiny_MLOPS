@@ -22,7 +22,7 @@ app = flask.Flask(__name__)
 
 @app.route("/")
 def index():
-        return "Welcome To My Covid-19_detector API"
+        return "Welcome to the Covid-19_detector API"
 
 
 @app.route("/alive", methods=["GET"])
