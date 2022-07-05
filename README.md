@@ -4,7 +4,7 @@
 - It was first build using [python any where](https://www.pythonanywhere.com/), but it was inconsistent and unreliable at all.
 - Then the final version was made using [herokuapp](https://dashboard.heroku.com/apps)
 - The model used here is the small model, to use the efficientnet model it can be changed in the [app.py](app.py) by passing the [efficientnet based model path](models/model_efficientnet.h5).
-- Now it can be accessed using this [url](http://rdimlops.herokuapp.com/)
+- Now it can be accessed using this [url](https://zeiny-mlops.herokuapp.com/)
 - To test it you can use:
 ```
 curl -X 'GET' 'http://mahmoudelzeiny.pythonanywhere.com/alive'
