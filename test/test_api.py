@@ -1,17 +1,11 @@
 import requests
 
-def test_alive():
-  res_code = str(res).split('[')[1].split(']')[0]
-  assert (res_code == '200')
-  assert (res.json()["message"]=='Server is alive!')
-
 def test_response():
   res_code = str(res).split('[')[1].split(']')[0]
   assert (res_code == '200')
 
 res = requests.get('https://zeiny-mlops.herokuapp.com/alive')
-print(res.json())
-test_alive()
+test_response()
 
 dir="COVID19.png"
 image_file=open(dir,"rb")
