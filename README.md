@@ -8,7 +8,7 @@
 - Now it can be accessed using this [url](https://zeiny-mlops.herokuapp.com/)
 - To test it you can use:
 ```
-curl -X 'GET' 'http://mahmoudelzeiny.pythonanywhere.com/alive'
+curl -X 'GET' 'https://zeiny-mlops.herokuapp.com/alive'
 ```
 - Or to send an image and get the result use:
 ```
