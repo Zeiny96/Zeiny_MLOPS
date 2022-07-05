@@ -4,6 +4,7 @@
 ## Content
 - [Structure](#structure)
 - [Requests-Responses](#requests-responses)
+- [Error handling](#error handling)
 
 ## Structure
 - The main flask script is [app.py](app.py).
@@ -36,3 +37,5 @@ dicttosend={'file':image_file}
 res = requests.post('https://zeiny-mlops.herokuapp.com/prediction',files=dicttosend)
 print ('response from server:',res.json())
 ```
+
+## Error handling
