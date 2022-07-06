@@ -74,10 +74,9 @@ _________________________________________________________________
 
 ### [small model](models/model_small.h5):
 - **Training/validation loss graph**:                
-![alt text](images/loss.jpg)
+![alt text](images/loss.png)
 - **Training/validation accuracy graph**:                
-![alt text](images/accuracy.png)
-- The 8th epoch checkpoint was used as the final model.
+![alt text](images/acc.png)
 - Test set results:                   
   - Precision: 93.95%                
   - Recall: 94.78%                  
