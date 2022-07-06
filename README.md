@@ -66,7 +66,7 @@ _________________________________________________________________
   - F1_score: 98.62%
   - Accuracy: 98.76%
   - Confusion matrix:
-  ![alt text](images/cm_efficientnet.jpg)
+  ![alt text](images/cm_efficientnet.png)
 
 ### [small model](models/model_small.h5):
 - **Training/validation loss graph**:                
@@ -80,5 +80,5 @@ _________________________________________________________________
   F1_score: 94.34%
   Accuracy: 94.83%
   - Confusion matrix:
-  ![alt text](images/cm_small_model.jpg)
+  ![alt text](images/cm_small_model.png)
 - The [efficientnet based model](models/model_efficientnet.h5) got greater results but the [small model](models/model_small.h5) results can also be accepted due to its small number of parameters and faster performance.
