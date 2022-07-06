@@ -32,7 +32,7 @@ if nav == "Large Efficientnet based model":
 
 if nav == "Small trained from scratch model":
     model = load_model('models/model_small.h5')
-    st.write("You chose the smaller trained from scratch model with about 95% accuracy ")
+    st.write("You chose the small trained from scratch model with about 95% accuracy ")
 
 uploaded_file = st.file_uploader("Upload an image")
 if uploaded_file is not None:
