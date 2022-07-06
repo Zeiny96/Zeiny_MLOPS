@@ -1,7 +1,7 @@
 import requests
 
 def test_response():
-  res_code = str(res).split('[')[1].split(']')[0]
+  res_code = res.status_code #str(res).split('[')[1].split(']')[0]
   assert (res_code == expected_code)
 
 # Alive endpoint test
