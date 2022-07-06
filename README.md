@@ -65,7 +65,7 @@ _________________________________________________________________
   - Recall: 98.2%              
   - F1_score: 98.62%                
   - Accuracy: 98.76%                 
-  - Confusion matrix:
+  - Confusion matrix:                  
   ![alt text](images/cm_efficientnet.png)
 
 ### [small model](models/model_small.h5):
@@ -75,10 +75,10 @@ _________________________________________________________________
 ![alt text](images/accuracy.png)
 - The 8th epoch checkpoint was used as the final model.
 - Test set results:                   
-  Precision: 93.95%                
-  Recall: 94.78%                  
-  F1_score: 94.34%                 
-  Accuracy: 94.83%                 
-  - Confusion matrix:
+  - Precision: 93.95%                
+  - Recall: 94.78%                  
+  - F1_score: 94.34%                 
+  - Accuracy: 94.83%                 
+  - Confusion matrix:               
   ![alt text](images/cm_small_model.png)
 - The [efficientnet based model](models/model_efficientnet.h5) got greater results but the [small model](models/model_small.h5) results can also be accepted due to its small number of parameters and faster performance.
