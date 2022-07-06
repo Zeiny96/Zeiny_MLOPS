@@ -24,7 +24,7 @@ def predict(model,img):
 
 st.title("Covid-19_detector")
 st.write("Choose the suitable model from the left sidebar, upload the image then click predict to get the result")
-nav = st.sidebar.radio("Model selection",["Large Efficientnet based model","Small trained from scratch model"])
+nav = st.sidebar.radio("Model selection",["Small trained from scratch model","Large Efficientnet based model"])
 
 if nav == "Large Efficientnet based model":
     model = load_model('models/model_efficientnet.h5')
