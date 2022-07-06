@@ -62,7 +62,8 @@ plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.legend(['train', 'validation'], loc='upper left')
-plt.savefig('acc.png')
+plt.show()
+plt.clf()
 # summarize history for loss
 plt.plot(history.history['loss'])
 plt.plot(history.history['val_loss'])
@@ -70,12 +71,7 @@ plt.title('model loss')
 plt.ylabel('loss')
 plt.xlabel('epoch')
 plt.legend(['train', 'validation'], loc='upper left')
-plt.savefig('val.png')
-
-test_dir = "../DataSet/Data/test_png"
-evaluate_gen = image_dataset_from_directory(directory=test_dir,label_mode='binary',batch_size=32,color_mode='grayscale',image_size=input_shape)
-loss,acc = model.evaluate(evaluate_gen)
-print(acc)
+plt.show()
 
 model.save(f'model_{round(acc,3)}.h5')
 
