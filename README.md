@@ -2,8 +2,12 @@
 - In this repo the training steps will be discussed
 
 ## Contents
+- [Prerequisites](#prerequisites)
 - [Training](#training)
 - [Evaluation](#evaluation)
+
+## Prerequisites
+- Just install the libraries in the [requirements.txt](requirements.txt) file.
 
 ## Training
 - Where 2 models were trained a [small model](models/model_small.h5) trained from scratch with the following architecture:
