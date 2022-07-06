@@ -2,9 +2,13 @@
 - This is a flask based Covid-19_detector API.
 
 ## Content
+- [Prerequisites](#prerequisites)
 - [Structure](#structure)
 - [Requests-Responses](#requests-responses)
 - [Error_handling](#error_handling)
+
+## Prerequisites
+- Just install the libraries in the [requirements.txt](requirements.txt) file.
 
 ## Structure
 - The main flask script is [app.py](app.py).
