@@ -60,11 +60,11 @@ _________________________________________________________________
 - To test any produced model on a single image use [test.py](test.py) while passing the desired `model.h5` file to it.
 ### [Efficientnet based model](models/model_efficientnet.h5):
 - This model was trained only for 1 epoch so drawing a training/validation accuracy and loss graphs wasn't possible.
-- Test set results:
-  - Precision: 99.07%
-  - Recall: 98.2%
-  - F1_score: 98.62%
-  - Accuracy: 98.76%
+- Test set results:            
+  - Precision: 99.07%               
+  - Recall: 98.2%              
+  - F1_score: 98.62%                
+  - Accuracy: 98.76%                 
   - Confusion matrix:
   ![alt text](images/cm_efficientnet.png)
 
@@ -74,11 +74,11 @@ _________________________________________________________________
 - **Training/validation accuracy graph**:                
 ![alt text](images/accuracy.png)
 - The 8th epoch checkpoint was used as the final model.
-- Test set results:
-  Precision: 93.95%
-  Recall: 94.78%
-  F1_score: 94.34%
-  Accuracy: 94.83%
+- Test set results:                   
+  Precision: 93.95%                
+  Recall: 94.78%                  
+  F1_score: 94.34%                 
+  Accuracy: 94.83%                 
   - Confusion matrix:
   ![alt text](images/cm_small_model.png)
 - The [efficientnet based model](models/model_efficientnet.h5) got greater results but the [small model](models/model_small.h5) results can also be accepted due to its small number of parameters and faster performance.
