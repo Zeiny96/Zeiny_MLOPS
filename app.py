@@ -24,15 +24,15 @@ def predict(model,img):
 
 st.title("Covid-19_detector")
 st.write("Choose the suitable model from the left sidebar, upload the image then click predict to get the result")
-nav = st.sidebar.radio("Model selection",["Trained from scratch","Trained from Efficientnet"])
+nav = st.sidebar.radio("Model selection",["Trained from Efficientnet","Trained from scratch"])
 
 if nav == "Trained from Efficientnet":
     model = load_model('models/model_efficientnet.h5')
-    st.write("You choosed the Efficientnet based model with about 99% accuracy ")
+    st.write("You chose the Efficientnet based model with about 99% accuracy ")
 
 if nav == "Trained from scratch":
     model = load_model('models/model_small.h5')
-    st.write("You choosed the smaller trained from scratch model with about 95% accuracy ")
+    st.write("You chose the smaller trained from scratch model with about 95% accuracy ")
 
 uploaded_file = st.file_uploader("Upload an image")
 if uploaded_file is not None:
