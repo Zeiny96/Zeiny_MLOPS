@@ -43,8 +43,8 @@ def efficientnet():
 
 train_dir = "../DataSet/Data/train_png"
 input_shape = (256,256)
-train_generator = image_dataset_from_directory(directory=train_dir,label_mode='binary',batch_size=32,color_mode='grayscale',image_size=input_shape,seed=375729,validation_split=0.2,subset='training')
-valid_generator = image_dataset_from_directory(directory=train_dir,label_mode='binary',batch_size=32,color_mode='grayscale',image_size=input_shape,seed=375729,validation_split=0.2,subset='validation')
+train_generator = image_dataset_from_directory(directory=train_dir,label_mode='binary',batch_size=32,color_mode='grayscale',image_size=input_shape,seed=1234,validation_split=0.2,subset='training')
+valid_generator = image_dataset_from_directory(directory=train_dir,label_mode='binary',batch_size=32,color_mode='grayscale',image_size=input_shape,seed=1234,validation_split=0.2,subset='validation')
 
 
 model = efficientnet()
